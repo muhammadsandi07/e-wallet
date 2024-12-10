@@ -152,6 +152,7 @@ body {
   border-radius: 6px;
   margin-top: 12px;
 }
+
 /* .btn-submit a {
   font-family: 'Montserrat', serif;
   width: 100%;
@@ -186,4 +187,8 @@ body {
   top: 0;
   left: 0;
   transform: translateY(-55%);
+}
+
+a.cl-white {
+  color: #fff;
 }
