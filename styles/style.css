@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+}
+
+html {
+  overflow-x: hidden;
+  font-family: 'Montserrat', serif;
+}
+
+body {
+  background-color: white;
+  color: white;
+}
+
+.bg-white {
+  background-color: #fff;
+  color: #4f5665;
+}
+.bg-blue {
+  background-color: #2948ff;
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 100;
+}
+.header .logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.header .logo .logo-image {
+  width: 32px;
+}
+.header .logo .company-name {
+  font-family: 'Nunito Sans', serif;
+  font-size: 20px;
+  font-weight: 600;
+}
+.btn-auth {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+.btn-signin,
+.btn-signup {
+  font-size: 14px;
+  line-height: 24px;
+  padding: 12px 18px;
+  border-radius: 5px;
+}
+
+.btn-signin {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+}
+.btn-signup {
+  background-color: #fff;
+  color: #2948ff;
+  border: 1px solid #2948ff;
+}
+section {
+  min-height: 100vh;
+}
+section.section-hero {
+  padding: 10rem 7% 0px;
+  background-color: #2948ff;
+}
+.section-hero .hero-content p {
+  font-size: 60px;
+  font-weight: 500;
+  line-height: 73.14px;
+  text-align: center;
+}
+.hero-banner {
+  display: flex;
+}
+.banner-mobile {
+  display: flex;
+  background-color: #fff;
+}
+.banner-mobile .image-mobile-first {
+  align-self: flex-end;
+}
+.banner-mobile .image-mobile-second {
+  align-self: flex-end;
+}
+
+/* dashboard */
+.nav-profile {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 22px;
+}
+.profile .username {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.6%;
+}
+
+.profile-img {
+  width: 48px;
+  height: 48px;
+}

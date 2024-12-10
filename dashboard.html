@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles/dashboard.css" />
+  </head>
+  <body>
+    <!-- header -->
+    <header class="header flex-between border-bottom">
+      <div class="logo flex">
+        <img src="images/MoneyWallet.png" alt="" class="logo-image" />
+        <p class="company-name">E-Wallet</p>
+      </div>
+      <nav class="nav-profile flex">
+        <p class="username text-base font-normal">Ghaluh Wizard</p>
+        <img src="images/user/user-profile.png" alt="" />
+        <img src="images/icon/Vector.png" alt="" />
+      </nav>
+    </header>
+    <!--container main -->
+    <div class="flex">
+      <!-- aside -->
+      <aside class="container-aside flex border-right">
+        <div class="aside-navigation rounded-6 active">
+          <img
+            class="aside-icon"
+            src="images/icon/active-dashboard.png"
+            alt=""
+          />
+          <p class="text-base font-normal">Dashboard</p>
+        </div>
+        <div class="aside-navigation rounded-6">
+          <img class="aside-icon" src="images/icon/Send-deactive.png" alt="" />
+          <p class="text-base font-normal">Transfer</p>
+        </div>
+        <div class="aside-navigation rounded-6">
+          <img class="aside-icon" src="images/icon/history.png" alt="" />
+          <p class="text-base font-normal">History</p>
+        </div>
+        <div class="aside-navigation rounded-6">
+          <img class="aside-icon" src="images/icon/Upload.png" alt="" />
+          <p class="text-base font-normal">Top Up</p>
+        </div>
+        <div class="aside-navigation rounded-6">
+          <img class="aside-icon" src="images/icon/user.png" alt="" />
+          <p class="text-base font-normal">Profile</p>
+        </div>
+        <div class="aside-navigation rounded-6">
+          <img class="aside-icon" src="images/icon/Log Out.png" alt="" />
+          <p class="text-base font-normal">Keluar</p>
+        </div>
+      </aside>
+      <!-- main -->
+      <main id="main" class="flex">
+        <section class="content-dashboard">
+          <div class="flex-between">
+            <div class="container-finance border-solid rounded-6 flex-col">
+              <div class="finance-title items-center flex">
+                <img src="images/icon/balance.png" alt="" />
+                <p class="title text-base">Balance</p>
+              </div>
+              <p class="amount">Rp.120.000</p>
+              <div class="finance-description flex">
+                <p class="percentage cl-green">+2%</p>
+                <img
+                  class="description-arrow"
+                  src="images/icon/ArrowRise-s.png"
+                  alt=""
+                />
+                <p class="description-time cl-green">3 Days Ago</p>
+              </div>
+            </div>
+            <div class="container-finance border-solid rounded-6 flex-col">
+              <div class="finance-title .items-center flex">
+                <img src="images/icon/income.png" alt="income" />
+                <p class="title text-base">Income</p>
+              </div>
+              <p class="amount">Rp.2.120.000</p>
+              <div class="finance-description flex">
+                <p class="percentage cl-green">+11.01%</p>
+                <img
+                  class="description-arrow"
+                  src="images/icon/ArrowRise-s.png"
+                  alt="arrow up"
+                />
+                <p class="description-time cl-green">3 Days Ago</p>
+              </div>
+            </div>
+            <div class="container-finance border-solid rounded-6 flex-col">
+              <div class="finance-title .items-center flex">
+                <img src="images/icon/expense.png" alt="expense" />
+                <p class="title text-base">Expense</p>
+              </div>
+              <p class="amount cl-black">Rp.200.000</p>
+              <div class="finance-description flex">
+                <p class="percentage cl-red">-5.06%</p>
+                <img
+                  class="description-arrow"
+                  src="images/icon/arrowdown1.png"
+                  alt=""
+                />
+                <p class="description-time cl-red">3 Days Ago</p>
+              </div>
+            </div>
+          </div>
+          <section
+            class="section-fast-service flex-between border-solid rounded-6"
+          >
+            <h3 class="text-base font-semibold">Fast Service</h3>
+            <div class="btn-service">
+              <button class="btn rounded-6 item-center">
+                <img src="images/icon/u_money-insert.png" alt="top up" />
+                <p class="text-base cl-white">Top Up</p>
+              </button>
+              <button class="item-center btn rounded-6">
+                <img src="images/icon/send-active.png" alt="" />
+                <p class="text-base font-normal cl-white">Transfer</p>
+              </button>
+            </div>
+          </section>
+          <section class="section-chart border-solid">
+            <header class="flex-between">
+              <p class="text-base font-semibold">Income Chart</p>
+              <div class="container-select flex item-center">
+                <button class="btn-select flex rounded-6">
+                  <div class="flex item-center">
+                    <p class="title-select">7 Days</p>
+                    <div>
+                      <img src="images/icon/Vector.png" alt="" />
+                    </div>
+                  </div>
+                </button>
+                <button class="btn-select flex rounded-6">
+                  <div class="flex item-center">
+                    <p class="title-select">Income</p>
+                    <div>
+                      <img src="images/icon/Vector.png" alt="" />
+                    </div>
+                  </div>
+                </button>
+              </div>
+            </header>
+            <div class="chart">
+              <img
+                src="images/icon/Chart.png"
+                alt="chart"
+                width="668"
+                height="472"
+              />
+            </div>
+          </section>
+        </section>
+        <section class="transaction-history flex-2 border-solid rounded-6">
+          <div class="Transaction-title flex-between text-base cl-black">
+            <p>Transaction History</p>
+            <p class="text-details">see all</p>
+          </div>
+          <div class="user-transaction flex">
+            <div>
+              <img
+                src="images/user/robert-fox.png"
+                alt="user"
+                class="img-user"
+              />
+            </div>
+            <div class="transfer-description flex item-center">
+              <div class="details-name flex-2">
+                <p class="name-user">Robert Fox</p>
+                <div class="details-transfer">Transfer</div>
+              </div>
+              <div>
+                <p class="amount-transfer cl-green flex-1">+Rp.50.000</p>
+              </div>
+            </div>
+          </div>
+          <div class="user-transaction flex">
+            <div>
+              <img
+                src="images/user/fyod-miles.png"
+                alt="user"
+                class="img-user"
+              />
+            </div>
+            <div class="transfer-description flex item-center">
+              <div class="details-name flex-2">
+                <p class="name-user">Fyod Miles</p>
+                <div class="details-transfer">Send</div>
+              </div>
+              <div>
+                <p class="amount-transfer cl-red flex-1">-Rp.50.000</p>
+              </div>
+            </div>
+          </div>
+          <div class="user-transaction flex">
+            <div>
+              <img src="images/user/ujang.png" alt="user" class="img-user" />
+            </div>
+            <div class="transfer-description flex item-center">
+              <div class="details-name flex-2">
+                <p class="name-user">Ujang</p>
+                <div class="details-transfer">Send</div>
+              </div>
+              <div>
+                <p class="amount-transfer cl-red flex-1">-Rp.50.000</p>
+              </div>
+            </div>
+          </div>
+          <div class="user-transaction flex">
+            <div>
+              <img
+                src="images/user/raulemons.png"
+                alt="user"
+                class="img-user"
+              />
+            </div>
+            <div class="transfer-description flex item-center">
+              <div class="details-name flex-2">
+                <p class="name-user">Raulemons</p>
+                <div class="details-transfer">Transfer</div>
+              </div>
+              <div>
+                <p class="amount-transfer cl-green flex-1">+Rp.50.000</p>
+              </div>
+            </div>
+          </div>
+          <div class="user-transaction flex">
+            <div>
+              <img src="images/user/reiva.png" alt="user" class="img-user" />
+            </div>
+            <div class="transfer-description flex item-center">
+              <div class="details-name flex-2">
+                <p class="name-user">Reiva</p>
+                <div class="details-transfer">Transfer</div>
+              </div>
+              <div>
+                <p class="amount-transfer cl-green flex-1">+Rp.50.000</p>
+              </div>
+            </div>
+          </div>
+          <div class="user-transaction flex">
+            <div>
+              <img src="images/user/thobie.png" alt="user" class="img-user" />
+            </div>
+            <div class="transfer-description flex item-center">
+              <div class="details-name flex-2">
+                <p class="name-user">Thobie</p>
+                <div class="details-transfer">Transfer</div>
+              </div>
+              <div>
+                <p class="amount-transfer cl-red flex-1">-Rp.50.000</p>
+              </div>
+            </div>
+          </div>
+          <div class="user-transaction flex">
+            <div>
+              <img src="images/user/buzjany.png" alt="user" class="img-user" />
+            </div>
+            <div class="transfer-description flex item-center">
+              <div class="details-name flex-2">
+                <p class="name-user">Buzjany</p>
+                <div class="details-transfer">Transfer</div>
+              </div>
+              <div>
+                <p class="amount-transfer cl-green flex-1">+Rp.50.000</p>
+              </div>
+            </div>
+          </div>
+          <div class="user-transaction flex">
+            <div>
+              <img src="images/user/adisurya.png" alt="user" class="img-user" />
+            </div>
+            <div class="transfer-description flex item-center">
+              <div class="details-name flex-2">
+                <p class="name-user">Adi surya</p>
+                <div class="details-transfer">Send</div>
+              </div>
+              <div>
+                <p class="amount-transfer cl-red flex-1">-Rp.50.000</p>
+              </div>
+            </div>
+          </div>
+          <div class="user-transaction flex">
+            <div>
+              <img src="images/user/miguel.png" alt="user" class="img-user" />
+            </div>
+            <div class="transfer-description flex item-center">
+              <div class="details-name flex-2">
+                <p class="name-user">Miguelle</p>
+                <div class="details-transfer">Transfer</div>
+              </div>
+              <div>
+                <p class="amount-transfer cl-green flex-1">+Rp.50.000</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

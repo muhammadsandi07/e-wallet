@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  scroll-behavior: smooth;
+  text-decoration: none;
+}
+
+html {
+  overflow-x: hidden;
+  font-family: 'Montserrat', serif;
+}
+
+body {
+  background-color: #fff;
+}
+
+.header {
+  width: 100%;
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #e8e8e8;
+  position: relative;
+}
+.header .logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.header .logo .logo-image {
+  width: 32px;
+}
+.header .logo .company-name {
+  font-family: 'Nunito Sans', serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #2948ff;
+}
+
+.nav-profile {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+.nav-profile .username {
+  color: #4f5665;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.6%;
+}
+.container-dropdown {
+  width: 248px;
+  height: 142px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: 0 4px 20px 0 #0b132a14;
+  border-radius: 12px;
+  position: absolute;
+  right: 30px;
+  bottom: -148px;
+  background-color: #fff;
+}
+.dropdown {
+  width: 208px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  padding: 4px 12px 4px 8px;
+  color: #fff;
+  gap: 8px;
+  border-radius: 6px;
+}
+.dropdown .profile {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.6px;
+  color: #4f5665;
+}
+.profile img {
+  background-color: #2948ff;
+  color: #0b132a;
+}
+/* aside */
+.container-aside {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+  padding: 1.5rem 2rem;
+  border-right: 1px solid #e8e8e8;
+  height: 100vh;
+}
+.container-aside .aside-navigation {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  width: 208px;
+  height: 45px;
+  padding: 4px 12px 4px 8px;
+  color: #4f5665;
+  border-radius: 6px;
+}
+.container-aside .aside-navigation:hover {
+  border-right: 3px solid #2948ff;
+  border-bottom: 3px solid #2948ff;
+  transition: 0.1s ease-out;
+}
+.container-aside .aside-navigation.active {
+  background-color: #2948ff;
+  color: #fff;
+}
+#content {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  padding: 1.5rem 2rem;
+}
+.content-title {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 14px;
+}
+.content-title img {
+  width: 24px;
+  height: 24px;
+}
+.content-title p {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: -0.6px;
+  color: #0b132a;
+}
+
+.progress-bar {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  gap: 13px;
+}
+.progress {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+  margin-inline: 0.7rem;
+}
+.progress-status {
+  width: 24px;
+  height: 24px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.6%;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #4f5665;
+  color: #ffffff;
+}
+.progress-status.active {
+  background-color: #2948ff;
+}
+.progress-status-name {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.6%;
+  color: #4f5665;
+}
+.line-status {
+  border: 0.5px dashed #4f5665;
+  width: 85px;
+}
+
+/* find people */
+.find-people {
+  width: 100%;
+  height: 100%;
+  margin-top: 1.4rem;
+  padding: 1.7rem 2rem;
+}
+.container-search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container-search .title {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: -0.6%;
+  color: #0b132a;
+}
+.container-search .result {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #4f5665;
+}
+.search {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0.5rem;
+  border: 1px solid #e8e8e8;
+  gap: 1rem;
+  border-radius: 6px;
+}
+.search .input {
+  font-family: 'Montserrat', serif;
+  color: #4f5665;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  width: 340px;
+}
+.search img {
+  width: 16px;
+  height: 16px;
+}
+.list-person {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2.5rem;
+}
+
+.card-person {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px 16px 4px;
+}
+.image-person {
+  flex: 1;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.name-people {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #4f5665;
+}
+.phone {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #4f5665;
+}
+.star {
+  width: 24px;
+  height: 24px;
+}
+/* global */
+.flex {
+  display: flex;
+}
+.bg-gray {
+  background-color: #e8e8e84d;
+}
+.bg-blue {
+  background-color: #2948ff;
+}
+.text-white {
+  color: #fff;
+}
