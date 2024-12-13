@@ -65,10 +65,22 @@ body {
   font-weight: 500;
   line-height: 43.88px;
 }
+
+.text-input {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.63px;
+  letter-spacing: 0.75px;
+}
 .text-title {
   font-size: 18px;
   font-weight: 700;
   line-height: 21.94px;
+}
+.text-sm-normal-leading-6-input {
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.75px;
 }
 .text-desc {
   font-size: 16px;
@@ -84,6 +96,22 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 19.5px;
+}
+.text-base {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+}
+.text-base-semibold-leading-7 {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 28px;
+}
+.text-base-jkt-normal {
+  font-family: 'Plus Jakarta Sans', serif;
+  font-size: 16px;
+  line-height: 20.16px;
+  font-weight: 400;
 }
 .text-icon {
   font-family: 'Nunito Sans', serif;
@@ -112,7 +140,7 @@ body {
   font-weight: 500;
   text-align: center;
 }
-.text-heading-footer {
+.text-lg-semibold-leading-4 {
   font-size: 18px;
   line-height: 18px;
   letter-spacing: 1px;
@@ -135,9 +163,6 @@ body {
   gap: 6px;
 }
 .btn-signin a {
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: 0.75px;
   color: #fff;
 }
 .btn-signin {
@@ -150,9 +175,6 @@ body {
 }
 
 .btn-signup a {
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: 0.75px;
   color: #3969fd;
 }
 .btn-store {
@@ -284,10 +306,6 @@ body {
 }
 
 .container-happy-users > p:last-child {
-  font-family: 'Plus Jakarta Sans', serif;
-  font-size: 16px;
-  line-height: 20.16px;
-  font-weight: 400;
   margin-top: 1rem;
 }
 
@@ -299,7 +317,6 @@ body {
 }
 .card-fiture p:first-child {
   color: #0b132a;
-
   margin-bottom: 6px;
 }
 
@@ -407,9 +424,6 @@ footer {
   border-radius: 6px;
   background-color: #fff;
   color: #2948ff;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 20px;
 }
 .input {
   display: flex;
@@ -421,16 +435,9 @@ footer {
   border-radius: 6px;
 }
 .input input {
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 14.63px;
-  letter-spacing: 0.75px;
   color: #4f5665;
 }
 
 .info {
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 28px;
   color: #efefef;
 }

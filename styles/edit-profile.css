@@ -86,34 +86,7 @@ body {
   background-color: #2948ff;
   color: #0b132a;
 }
-/* aside */
-.container-aside {
-  display: flex;
-  flex-direction: column;
-  row-gap: 16px;
-  padding: 1.5rem 2rem;
-  border-right: 1px solid #e8e8e8;
-  min-height: 100vh;
-}
-.container-aside .aside-navigation {
-  display: flex;
-  gap: 8px;
-  align-items: center;
-  width: 208px;
-  height: 45px;
-  padding: 4px 12px 4px 8px;
-  color: #4f5665;
-  border-radius: 6px;
-}
-.container-aside .aside-navigation:hover {
-  border-right: 3px solid #2948ff;
-  border-bottom: 3px solid #2948ff;
-  transition: 0.1s ease-out;
-}
-.container-aside .aside-navigation.active {
-  background-color: #2948ff;
-  color: #fff;
-}
+
 #content {
   display: flex;
   flex-direction: column;

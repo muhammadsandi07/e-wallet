@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Transfer</title>
+    <link rel="stylesheet" href="styles/global.css" />
     <link rel="stylesheet" href="styles/transfer.css" />
+    <script src="script/transfer.js" defer></script>
   </head>
   <body>
     <!-- header -->
@@ -16,7 +18,7 @@
       <nav class="nav-profile">
         <p class="username">Ghaluh Wizard</p>
         <img src="images/user/user-profile.png" alt="img-profile" />
-        <img src="images/icon/Vector.png" alt="img-dropdown" />
+        <img src="images/icon/Vector.svg" alt="img-dropdown" class="toggle" />
       </nav>
       <div class="container-dropdown">
         <a href="" class="dropdown bg-blue">
@@ -30,176 +32,187 @@
       </div>
     </header>
     <!--container main -->
-    <div class="flex">
-      <!-- aside -->
-      <aside class="container-aside flex flex-1 border-right">
-        <a href="dashboard.html">
-          <div class="aside-navigation rounded-6">
-            <img
-              class="aside-icon"
-              src="images/icon/dashboard-inactive.png"
-              alt=""
-            />
-            <p class="text-base font-normal">Dashboard</p>
-          </div>
-        </a>
-        <a href="transfer.html">
-          <div class="aside-navigation active">
-            <img
-              class="aside-icon"
-              src="images/icon/send-active.png"
-              alt="aside-icon"
-            />
-            <p class="text-base font-normal">Transfer</p>
-          </div>
-        </a>
-        <a href="history.html">
-          <div class="aside-navigation">
-            <img
-              class="aside-icon"
-              src="images/icon/history.png"
-              alt="aside-icon"
-            />
-            <p class="text-base font-normal">History</p>
-          </div>
-        </a>
-        <a href="top-up-account.html">
-          <div class="aside-navigation">
-            <img
-              class="aside-icon"
-              src="images/icon/Upload.png"
-              alt="aside-icon"
-            />
-            <p class="text-base font-normal">Top Up</p>
-          </div>
-        </a>
-        <a href="edit-profile.html">
-          <div class="aside-navigation">
-            <img
-              class="aside-icon"
-              src="images/icon/user.png"
-              alt="aside-icon"
-            />
-            <p class="text-base font-normal">Profile</p>
-          </div>
-        </a>
-        <a href="landingpage.html">
-          <div class="aside-navigation">
-            <img
-              class="aside-icon"
-              src="images/icon/Log Out.png"
-              alt="aside-icon"
-            />
-            <p class="text-base font-normal">Keluar</p>
-          </div>
-        </a>
-      </aside>
-      <main id="content">
-        <div class="content-title">
-          <img src="images/icon/Send.png" alt="" />
-          <p>Transfer Money</p>
+
+    <!-- aside -->
+    <aside class="container-aside">
+      <a href="dashboard.html">
+        <div class="aside-navigation">
+          <img
+            class="aside-icon"
+            src="images/icon/dashboard-inactive.png"
+            alt=""
+          />
+          <p class="text-base font-normal">Dashboard</p>
         </div>
-        <div class="progress-bar">
-          <div class="progress">
-            <div class="progress-status active">1</div>
-            <p class="progress-status-name">Find People</p>
+      </a>
+      <a href="transfer.html">
+        <div class="aside-navigation active">
+          <img
+            class="aside-icon"
+            src="images/icon/send-active.png"
+            alt="aside-icon"
+          />
+          <p class="text-base font-normal">Transfer</p>
+        </div>
+      </a>
+      <a href="history.html">
+        <div class="aside-navigation">
+          <img
+            class="aside-icon"
+            src="images/icon/history.png"
+            alt="aside-icon"
+          />
+          <p class="text-base font-normal">History</p>
+        </div>
+      </a>
+      <a href="top-up-account.html">
+        <div class="aside-navigation">
+          <img
+            class="aside-icon"
+            src="images/icon/Upload.png"
+            alt="aside-icon"
+          />
+          <p class="text-base font-normal">Top Up</p>
+        </div>
+      </a>
+      <a href="edit-profile.html">
+        <div class="aside-navigation">
+          <img class="aside-icon" src="images/icon/user.png" alt="aside-icon" />
+          <p class="text-base font-normal">Profile</p>
+        </div>
+      </a>
+      <a href="landingpage.html">
+        <div class="aside-navigation">
+          <img
+            class="aside-icon"
+            src="images/icon/Log Out.png"
+            alt="aside-icon"
+          />
+          <p class="text-base font-normal">Keluar</p>
+        </div>
+      </a>
+    </aside>
+    <main id="content">
+      <div class="content-title">
+        <img src="images/icon/Send.png" alt="" />
+        <p>Transfer Money</p>
+      </div>
+      <div class="progress-bar">
+        <div class="progress">
+          <div class="progress-status active">1</div>
+          <p class="progress-status-name">Find People</p>
+        </div>
+        <div class="line-status"></div>
+        <div class="progress">
+          <div class="progress-status">2</div>
+          <p class="progress-status-name">Set Nominal</p>
+        </div>
+        <div class="line-status"></div>
+        <div class="progress">
+          <div class="progress-status">3</div>
+          <p class="progress-status-name">Finish</p>
+        </div>
+      </div>
+      <section class="find-people">
+        <div class="container-search">
+          <div>
+            <p class="title">Find People</p>
+            <p class="result">8 Result Found For Ghaluh</p>
           </div>
-          <div class="line-status"></div>
-          <div class="progress">
-            <div class="progress-status">2</div>
-            <p class="progress-status-name">Set Nominal</p>
-          </div>
-          <div class="line-status"></div>
-          <div class="progress">
-            <div class="progress-status">3</div>
-            <p class="progress-status-name">Finish</p>
+          <div class="search">
+            <input
+              class="input"
+              type="text"
+              placeholder="Enter Number Or Full Name"
+            />
+            <img src="images/icon/Search.png" alt="" />
           </div>
         </div>
-        <section class="find-people">
-          <div class="container-search">
-            <div>
-              <p class="title">Find People</p>
-              <p class="result">8 Result Found For Ghaluh</p>
-            </div>
-            <div class="search">
-              <input
-                class="input"
-                type="text"
-                placeholder="Enter Number Or Full Name"
-              />
-              <img src="images/icon/Search.png" alt="" />
-            </div>
-          </div>
-          <div class="list-person">
-            <a href="transfer-details.html">
-              <div class="card-person bg-gray">
-                <div class="image-person">
-                  <img src="images/user/person-1.png" alt="image-people" />
-                </div>
+        <div class="list-person">
+          <a href="transfer-details.html">
+            <div class="card-person bg-gray">
+              <div class="image-person">
+                <img src="images/user/person-1.png" alt="image-people" />
+              </div>
+              <div>
                 <p class="name-people">Ghaluh 1</p>
                 <p class="phone">(239) 555-0108</p>
-                <img src="images/icon/Star.png" alt="star" class="star" />
               </div>
-            </a>
-            <div class="card-person">
-              <div class="image-person">
-                <img src="images/user/person-2.png" alt="image-people" />
-              </div>
-              <p class="name-people">Ghaluh 1</p>
-              <p class="phone">(239) 555-0108</p>
               <img src="images/icon/Star.png" alt="star" class="star" />
             </div>
-            <div class="card-person bg-gray">
-              <div class="image-person">
-                <img src="images/user/person-3.png" alt="image-people" />
-              </div>
+          </a>
+          <div class="card-person">
+            <div class="image-person">
+              <img src="images/user/person-2.png" alt="image-people" />
+            </div>
+            <div>
               <p class="name-people">Ghaluh 1</p>
               <p class="phone">(239) 555-0108</p>
-              <img src="images/icon/Star.png" alt="star" class="star" />
             </div>
-            <div class="card-person">
-              <div class="image-person">
-                <img src="images/user/person-4.png" alt="image-people" />
-              </div>
-              <p class="name-people">Ghaluh 1</p>
-              <p class="phone">(239) 555-0108</p>
-              <img src="images/icon/Star.png" alt="star" class="star" />
-            </div>
-            <div class="card-person bg-gray">
-              <div class="image-person">
-                <img src="images/user/person-5.png" alt="image-people" />
-              </div>
-              <p class="name-people">Ghaluh 1</p>
-              <p class="phone">(239) 555-0108</p>
-              <img src="images/icon/Star.png" alt="star" class="star" />
-            </div>
-            <div class="card-person">
-              <div class="image-person">
-                <img src="images/user/person-6.png" alt="image-people" />
-              </div>
-              <p class="name-people">Ghaluh 1</p>
-              <p class="phone">(239) 555-0108</p>
-              <img src="images/icon/Star.png" alt="star" class="star" />
-            </div>
-            <div class="card-person bg-gray">
-              <div class="image-person">
-                <img src="images/user/person-7.png" alt="image-people" />
-              </div>
-              <p class="name-people">Ghaluh 1</p>
-              <p class="phone">(239) 555-0108</p>
-              <img src="images/icon/Star.png" alt="star" class="star" />
-            </div>
-            <div class="card-person">
-              <div class="image-person">
-                <img src="images/user/person-8.png" alt="image-people" />
-              </div>
-              <p class="name-people">Ghaluh 1</p>
-              <p class="phone">(239) 555-0108</p>
-              <img src="images/icon/Star.png" alt="star" class="star" />
-            </div>
+            <img src="images/icon/Star.png" alt="star" class="star" />
           </div>
-        </section>
-      </main>
-    </div>
+          <div class="card-person bg-gray">
+            <div class="image-person">
+              <img src="images/user/person-3.png" alt="image-people" />
+            </div>
+            <div>
+              <p class="name-people">Ghaluh 1</p>
+              <p class="phone">(239) 555-0108</p>
+            </div>
+            <img src="images/icon/Star.png" alt="star" class="star" />
+          </div>
+          <div class="card-person">
+            <div class="image-person">
+              <img src="images/user/person-4.png" alt="image-people" />
+            </div>
+            <div>
+              <p class="name-people">Ghaluh 1</p>
+              <p class="phone">(239) 555-0108</p>
+            </div>
+            <img src="images/icon/Star.png" alt="star" class="star" />
+          </div>
+          <div class="card-person bg-gray">
+            <div class="image-person">
+              <img src="images/user/person-5.png" alt="image-people" />
+            </div>
+            <div>
+              <p class="name-people">Ghaluh 1</p>
+              <p class="phone">(239) 555-0108</p>
+            </div>
+            <img src="images/icon/Star.png" alt="star" class="star" />
+          </div>
+          <div class="card-person">
+            <div class="image-person">
+              <img src="images/user/person-6.png" alt="image-people" />
+            </div>
+            <div>
+              <p class="name-people">Ghaluh 1</p>
+              <p class="phone">(239) 555-0108</p>
+            </div>
+            <img src="images/icon/Star.png" alt="star" class="star" />
+          </div>
+          <div class="card-person bg-gray">
+            <div class="image-person">
+              <img src="images/user/person-7.png" alt="image-people" />
+            </div>
+            <div>
+              <p class="name-people">Ghaluh 1</p>
+              <p class="phone">(239) 555-0108</p>
+            </div>
+            <img src="images/icon/Star.png" alt="star" class="star" />
+          </div>
+          <div class="card-person">
+            <div class="image-person">
+              <img src="images/user/person-8.png" alt="image-people" />
+            </div>
+            <div>
+              <p class="name-people">Ghaluh 1</p>
+              <p class="phone">(239) 555-0108</p>
+            </div>
+            <img src="images/icon/Star.png" alt="star" class="star" />
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
