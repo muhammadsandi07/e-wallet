@@ -4,7 +4,8 @@ body {
   background-color: #2948ff;
   border-bottom: 1px solid #e8e8e8;
 }
-header.header .logo {
+header.header .logo,
+.toggle {
   display: none;
 }
 
@@ -80,6 +81,14 @@ header.header .logo {
 }
 .card-balance > div:first-child > img.icon-cash-flow {
   display: none;
+}
+
+.header-section > p {
+  flex: 1;
+}
+.header-section > div {
+  flex: 2;
+  flex-wrap: nowrap;
 }
 
 /* section feature */
@@ -198,7 +207,9 @@ header.header .logo {
     display: flex;
     justify-content: space-between;
   }
-
+  .toggle {
+    display: block;
+  }
   header.header .logo {
     display: flex;
     align-items: center;
@@ -207,7 +218,12 @@ header.header .logo {
     flex-direction: row;
     color: #4f5665;
   }
-
+  .nav-profile > div > p:first-child {
+    display: none;
+  }
+  .nav-profile > img:last-child {
+    display: block;
+  }
   body {
     display: grid;
     min-height: 100vh;
@@ -242,6 +258,7 @@ header.header .logo {
   .section-cash-flow {
     height: max-content;
     background-color: #fff;
+    margin-top: 1rem;
   }
   .main > section:last-child {
     flex: 1;
@@ -267,6 +284,16 @@ header.header .logo {
   }
 
   .section.feature .header-section {
+    display: flex;
+  }
+  .header-section > p {
+    flex: 1.5;
+  }
+  .header-section > div {
+    flex: 1;
+    flex-wrap: nowrap;
+  }
+  .header-section > div {
     display: flex;
   }
   .btn.btn-feature {
