@@ -3,8 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/global.css" />
     <link rel="stylesheet" href="styles/register.css" />
     <title>Register</title>
+    <script type="module" src="script/register.js" defer></script>
   </head>
   <body>
     <div class="container-register">
@@ -23,74 +25,94 @@
           for you!
         </p>
         <div class="auth-btn">
-          <div class="btn btn-google">
+          <div class="btn">
             <img
               src="images/icon/company/flat-color-icons_google.png"
               alt="icon google"
             />
             <p>Sign In With Google</p>
           </div>
-          <div class="btn btn-google">
+          <div class="btn">
             <img
               src="images/icon/company/bx_bxl-facebook-circle.png"
               alt="icon google"
             />
             <p>Sign In With Facebook</p>
           </div>
-          <div class="text-or">Or</div>
         </div>
-
-        <div class="container-input">
-          <label for="email" class="input-label">Email</label>
-          <div class="input">
-            <img src="images/icon/email.png" alt="email icon" />
-            <input
-              type="text"
-              id="email"
-              name="email"
-              class="input-profile"
-              placeholder="Enter Your Email"
-            />
+        <div class="text-or">Or</div>
+        <form>
+          <div class="container-input">
+            <label for="email" class="input-label">Email</label>
+            <div class="input">
+              <img src="images/icon/email.png" alt="email icon" />
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="input-profile"
+                placeholder="Enter Your Email"
+              />
+            </div>
+            <span class="email-error error"></span>
           </div>
-        </div>
-        <div class="container-input">
-          <label for="email" class="input-label">Password</label>
-          <div class="input">
-            <img src="images/icon/Password.png" alt="email icon" />
-            <input
-              type="text"
-              id="email"
-              name="email"
-              class="input-profile"
-              placeholder="Enter Your Password"
-            />
-            <img src="images/icon/EyeSlash.png" alt="" />
+          <div class="container-input">
+            <label for="password" class="input-label">Password</label>
+            <div class="input">
+              <img src="images/icon/Password.png" alt="password icon" />
+              <input
+                type="password"
+                id="password"
+                name="password"
+                class="input-profile"
+                placeholder="Enter Your Password"
+              />
+              <button type="button" class="password">
+                <img src="images/icon/EyeSlash.png" alt="" />
+              </button>
+            </div>
+            <span class="password-error error"></span>
           </div>
-        </div>
-        <div class="container-input">
-          <label for="email" class="input-label">Confirm Password</label>
-          <div class="input">
-            <img src="images/icon/email.png" alt="email icon" />
-            <input
-              type="text"
-              id="email"
-              name="email"
-              class="input-profile"
-              placeholder="Enter Your Password Again"
-            />
-            <img src="images/icon/EyeSlash.png" alt="" />
+          <div class="container-input">
+            <label for="password-confirm" class="input-label"
+              >Confirm Password</label
+            >
+            <div class="input">
+              <img src="images/icon/Password.png" alt="password icon" />
+              <input
+                type="password"
+                id="password-confirm"
+                name="password-confirm"
+                class="input-profile"
+                placeholder="Enter Your Password Again"
+              />
+              <button type="button" class="confirm-password">
+                <img src="images/icon/EyeSlash.png" alt="" />
+              </button>
+            </div>
+            <span class="password-confirm-error error"></span>
           </div>
-        </div>
-        <a href="dashboard.html">
-          <button class="btn-submit">Register</button>
-        </a>
-        <p class="have-account">
-          Have An Account? <span><a href="register.html">Register</a></span>
-        </p>
+          <button class="btn-submit" type="button">Register</button>
+          <p class="have-account">
+            Have An Account? <span><a href="login.html">Login</a></span>
+          </p>
+        </form>
       </div>
       <div class="container-img-register">
         <img src="images/image-register.png" alt="" class="img-register" />
       </div>
+    </div>
+    <div class="alert hide">
+      <div>
+        <div class="icon"></div>
+        <div class="message"></div>
+      </div>
+      <div class="btn-close">
+        <img src="images/icon/xmark-solid.svg" alt="close" />
+      </div>
+    </div>
+    <div class="container-loader">
+      <div class="loader"></div>
     </div>
   </body>
 </html>

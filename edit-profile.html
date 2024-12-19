@@ -6,6 +6,8 @@
     <title>Profile</title>
     <link rel="stylesheet" href="styles/global.css" />
     <link rel="stylesheet" href="styles/edit-profile.css" />
+    <script src="script/aside.js" defer></script>
+    <script type="module" src="script/editProfile.js" defer></script>
   </head>
   <body>
     <!-- header -->
@@ -17,152 +19,135 @@
       <nav class="nav-profile">
         <p class="username">Ghaluh Wizard</p>
         <img src="images/user/user-profile.png" alt="img-profile" />
-        <img src="images/icon/Vector.png" alt="img-dropdown" />
+        <img src="images/icon/Vector.svg" alt="img-dropdown" />
       </nav>
     </header>
     <!--container main -->
-    <div class="flex">
-      <!-- aside -->
-      <aside class="container-aside flex flex-1 border-right">
-        <a href="dashboard.html">
-          <div class="aside-navigation rounded-6">
-            <img
-              class="aside-icon"
-              src="images/icon/dashboard-inactive.png"
-              alt=""
-            />
-            <p class="text-base font-normal">Dashboard</p>
+
+    <!-- aside -->
+    <aside class="container-aside">
+      <div class="aside-navigation rounded-6" target="/dashboard.html">
+        <img
+          class="aside-icon"
+          src="images/icon/dashboard-inactive.png"
+          alt=""
+        />
+        <p class="text-base font-normal">Dashboard</p>
+      </div>
+      <div class="aside-navigation" target="/transfer.html">
+        <img class="aside-icon" src="images/icon/Send.svg" alt="aside-icon" />
+        <p class="text-base font-normal">Transfer</p>
+      </div>
+      <div class="aside-navigation" target="/history.html">
+        <img
+          class="aside-icon"
+          src="images/icon/history.png"
+          alt="aside-icon"
+        />
+        <p class="text-base font-normal">History</p>
+      </div>
+      <div class="aside-navigation" target="/top-up-account.html">
+        <img class="aside-icon" src="images/icon/Upload.png" alt="aside-icon" />
+        <p class="text-base font-normal">Top Up</p>
+      </div>
+      <div class="aside-navigation" target="/edit-profile.html">
+        <img class="aside-icon" src="images/icon/user.png" alt="aside-icon" />
+        <p class="text-base font-normal">Profile</p>
+      </div>
+      <div class="aside-navigation" target="/index.html">
+        <img
+          class="aside-icon"
+          src="images/icon/Log Out.png"
+          alt="aside-icon"
+        />
+        <p class="text-base font-normal">Keluar</p>
+      </div>
+    </aside>
+    <main id="content">
+      <div class="content-title">
+        <img src="images/icon/profile-2.png" alt="" />
+        <p>Profile</p>
+      </div>
+      <section class="container-edit-profile">
+        <div class="container-people">
+          <p for="image-profile" class="title">Profile picture</p>
+          <div class="container-picture">
+            <div class="image-people">
+              <img src="images/icon/user-profile.png" alt="image-people" />
+            </div>
+            <div class="container-btn">
+              <button class="btn btn-edit">
+                <img src="images/icon/Edit Square.png" alt="" />
+                <p>Change Profile</p>
+              </button>
+              <button class="btn btn-delete">
+                <img src="images/icon/Delete.png" alt="" />
+                <p>Delete Profile</p>
+              </button>
+            </div>
           </div>
-        </a>
-        <a href="transfer.html">
-          <div class="aside-navigation active">
-            <img
-              class="aside-icon"
-              src="images/icon/send-active.png"
-              alt="aside-icon"
-            />
-            <p class="text-base font-normal">Transfer</p>
+          <p class="notes-input">
+            The profile picture must be 512 x 512 pixels or less
+          </p>
+          <div class="container-input">
+            <label for="fullName" class="input-label">Full Name</label>
+            <div class="input">
+              <img src="images/icon/user-input.png" alt="user icon" />
+              <input
+                type="text"
+                id="fullName"
+                name="fullName"
+                class="input-profile"
+                placeholder="Enter Full Name"
+              />
+            </div>
+            <p class="error error-fullName"></p>
           </div>
-        </a>
-        <a href="history.html">
-          <div class="aside-navigation">
-            <img
-              class="aside-icon"
-              src="images/icon/history.png"
-              alt="aside-icon"
-            />
-            <p class="text-base font-normal">History</p>
+          <div class="container-input">
+            <label for="phone" class="input-label">Phone</label>
+            <div class="input">
+              <img src="images/icon/Phone.png" alt="user icon" />
+              <input
+                type="number"
+                min="0"
+                maxlength="13"
+                minlength="10"
+                id="phone"
+                name="phone"
+                class="input-profile"
+                placeholder="Enter Your Number Phone"
+              />
+            </div>
+            <p class="error error-phone"></p>
           </div>
-        </a>
-        <a href="top-up-account.html">
-          <div class="aside-navigation">
-            <img
-              class="aside-icon"
-              src="images/icon/Upload.png"
-              alt="aside-icon"
-            />
-            <p class="text-base font-normal">Top Up</p>
+          <div class="container-input">
+            <label for="email" class="input-label">Email</label>
+            <div class="input">
+              <img src="images/icon/email.png" alt="email icon" />
+              <input
+                type="text"
+                id="email"
+                name="email"
+                class="input-profile"
+                placeholder="Enter Your Email"
+              />
+            </div>
+            <p class="error error-email"></p>
           </div>
-        </a>
-        <a href="edit-profile.html">
-          <div class="aside-navigation">
-            <img
-              class="aside-icon"
-              src="images/icon/user.png"
-              alt="aside-icon"
-            />
-            <p class="text-base font-normal">Profile</p>
+          <div class="container-input">
+            <p for="fullName" class="input-label">Password</p>
+            <a href="change-password.html" class="input-link"
+              >Change Password</a
+            >
           </div>
-        </a>
-        <a href="landingpage.html">
-          <div class="aside-navigation">
-            <img
-              class="aside-icon"
-              src="images/icon/Log Out.png"
-              alt="aside-icon"
-            />
-            <p class="text-base font-normal">Keluar</p>
+          <div class="container-input">
+            <p for="fullName" class="input-label">Pin</p>
+            <a href="change-pin.html" class="input-link">Change Pin</a>
           </div>
-        </a>
-      </aside>
-      <main id="content">
-        <div class="content-title">
-          <img src="images/icon/profile-2.png" alt="" />
-          <p>Profile</p>
         </div>
-        <section class="container-edit-profile">
-          <div class="container-people">
-            <p for="image-profile" class="title">Profile picture</p>
-            <div class="container-picture">
-              <div class="image-people">
-                <img src="images/icon/user-profile.png" alt="image-people" />
-              </div>
-              <div class="container-btn">
-                <button class="btn btn-edit">
-                  <img src="images/icon/Edit Square.png" alt="" />
-                  <p>Change Profile</p>
-                </button>
-                <button class="btn btn-delete">
-                  <img src="images/icon/Delete.png" alt="" />
-                  <p>Delete Profile</p>
-                </button>
-              </div>
-            </div>
-            <p class="notes-input">
-              The profile picture must be 512 x 512 pixels or less
-            </p>
-            <div class="container-input">
-              <label for="fullName" class="input-label">Full Name</label>
-              <div class="input">
-                <img src="images/icon/user-input.png" alt="user icon" />
-                <input
-                  type="text"
-                  id="fullName"
-                  name="fullName"
-                  class="input-profile"
-                  placeholder="Enter Full Name"
-                />
-              </div>
-            </div>
-            <div class="container-input">
-              <label for="phone" class="input-label">Phone</label>
-              <div class="input">
-                <img src="images/icon/Phone.png" alt="user icon" />
-                <input
-                  type="number"
-                  maxlength="13"
-                  id="phone"
-                  name="phone"
-                  class="input-profile"
-                  placeholder="Enter Your Number Phone"
-                />
-              </div>
-            </div>
-            <div class="container-input">
-              <label for="email" class="input-label">Email</label>
-              <div class="input">
-                <img src="images/icon/email.png" alt="email icon" />
-                <input
-                  type="text"
-                  id="email"
-                  name="email"
-                  class="input-profile"
-                  placeholder="Enter Your Email"
-                />
-              </div>
-            </div>
-            <div class="container-input">
-              <p for="fullName" class="input-label">Password</p>
-              <a href="#" class="input-link">Change Password</a>
-            </div>
-            <div class="container-input">
-              <p for="fullName" class="input-label">Pin</p>
-              <a href="#" class="input-link">Change Pin</a>
-            </div>
-          </div>
-          <button class="btn-submit">Submit</button>
-        </section>
-      </main>
-    </div>
+
+        <button class="btn-submit">Submit</button>
+      </section>
+    </main>
   </body>
 </html>

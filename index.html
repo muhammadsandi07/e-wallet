@@ -4,48 +4,361 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>E-Wallet</title>
-    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/landingpage.css" />
   </head>
   <body>
-    <header class="header">
-      <div class="logo">
-        <img src="images/MoneyWallet.png" alt="" class="logo-image" />
-        <p class="company-name">E-Wallet</p>
+    <header class="header section flex-justify-between-item-center bg-blue">
+      <div class="logo-icon flex item-center cl-white">
+        <img src="images/MoneyWallet.png" alt="" />
+        <p class="text-icon">E-Wallet</p>
       </div>
-      <div class="btn-auth">
-        <a href="#" class="btn-signin">Signin</a>
-        <a href="#" class="btn-signup">Sign Up</a>
+      <div class="flex container-btn-header">
+        <button class="btn-header btn-signin">
+          <a href="login.html" class="text-sm-normal-leading-6-input">SignIn</a>
+        </button>
+        <button class="btn-header btn-signup">
+          <a href="register.html" class="text-sm-normal-leading-6-input"
+            >SignUp</a
+          >
+        </button>
+        <!-- <img src="images/icon/menu-mobile.png" alt="" /> -->
       </div>
     </header>
-    <section class="section-hero">
-      <div class="hero-content">
-        <p>Experience the Future of Digital Payments with e-wallet</p>
-      </div>
-      <div class="hero-banner">
-        <div class="banner-mobile">
-          <div class="image-mobile-first">
-            <img
-              src="images/Mobile-Dashboard_V2-removebg.png"
-              alt="mobile dashboard"
-              width="291"
-              height="443"
-            />
+    <main>
+      <section class="section section-jumbotron content bg-blue">
+        <div class="heading-jumbotron">
+          <p class="heading1 cl-white text-center">
+            Experience the Future of Digital Payments with e-wallet
+          </p>
+        </div>
+        <div class="container-btn-download">
+          <p class="text-base-leading-1 cl-white">
+            Simplify Your Life with Secure and Convenient Mobile Payments
+          </p>
+          <div class="container-btn-store flex">
+            <button
+              class="btn-store btn-signup flex-justify-center-item-center"
+            >
+              <img src="images/gplay.png" alt="" />
+              <p class="cl-blue">Play Store</p>
+            </button>
+            <button
+              class="btn-store btn-signin flex-justify-center-item-center"
+            >
+              <img src="images/icon/appstore.png" alt="" />
+              <p class="cl-white">Apps Store</p>
+            </button>
           </div>
+          <div class="container-happy-users">
+            <div class="flex happy-users item-center">
+              <p class="text-5xl cl-white">4.6 M</p>
+              <img src="images/user/user.png" alt="" />
+            </div>
+            <p class="cl-white text-base-jkt-normal">
+              Around the world, we already have over 4.6 happy user
+            </p>
+          </div>
+        </div>
+        <div class="container-image-mobile flex">
+          <img
+            src="images/Mobile - Dashboard V2.png"
+            alt=""
+            height="443"
+            width="291"
+            class="mobile-jumbotron-one"
+          />
           <img
             src="images/Mobile - Dashboard V1.png"
-            alt="mobile dashboard"
-            class="image-mobile-second"
-            width="107"
-            height="225"
+            alt=""
+            width="197"
+            height="336"
+            class="mobile-jumbotron-two"
           />
         </div>
-        <div class="right">
-          <p>Simplify Your Life with Secure and Convenient Mobile Payments</p>
-          <button>Play Store</button>
-          <button>Apps Store</button>
+      </section>
+      <section class="section flex fiture">
+        <div class="card-fiture flex-justify-center-item-center">
+          <img src="images/headphone.png" alt="" />
+          <div>
+            <p class="text-title">24/7 Support</p>
+            <p class="text-base-normal-leading-1 cl-gray">
+              We have 24/7 contact support so you can contact us whenever you
+              want and we will respond it.
+            </p>
+          </div>
+          <div></div>
         </div>
-      </div>
-    </section>
-    <section></section>
+        <div class="card-fiture flex-justify-center-item-center">
+          <img src="images/security.png" alt="" />
+          <div>
+            <p class="text-title">Data Privacy</p>
+            <p class="text-base-normal-leading-1 cl-gray">
+              We make sure your data is safe in our database and we will encrypt
+              any data you submitted to us.
+            </p>
+          </div>
+          <div></div>
+        </div>
+        <div class="card-fiture flex-justify-center-item-center">
+          <img src="images/easy-download.png" alt="" />
+          <div>
+            <p class="text-title">Easy Download</p>
+            <p class="text-base-normal-leading-1 cl-gray">
+              Zwallet is 100% totally free to use it’s now available on Google
+              Play Store and App Store.
+            </p>
+          </div>
+          <div></div>
+        </div>
+      </section>
+      <section class="section container-get-started">
+        <div>
+          <div class="bg-image-mobile">
+            <img src="images/Mobile - Dashboard V2.png" alt="" />
+          </div>
+        </div>
+        <div class="e-wallet-description">
+          <p class="text-title cl-blue">WELCOME TO E-WALLET</p>
+          <p class="heading2 cl-black">
+            Your All-in-One Digital Payment Solution
+          </p>
+          <p class="text-desc cl-gray">
+            Say goodbye to cash and hello to the future of payments! With
+            e-wallet, you have the power of secure, fast, and convenient digital
+            transactions right at your fingertips. Whether you're shopping,
+            dining out, or sending money to loved ones, we've got you covered.
+          </p>
+          <button class="btn-get bg-blue cl-white">Get Started</button>
+        </div>
+      </section>
+      <section class="section bg-gray flex">
+        <div class="flex-1">
+          <img
+            src="images/online-payment-security-concept-3d-phone-bill 1.png"
+            alt=""
+          />
+        </div>
+
+        <div class="container-zwallet-fetures justify-evenly flex-col flex-3">
+          <p class="heading2 cl-black-100">All The Great Zwallet Features.</p>
+          <p class="text-base-leading-1 cl-gray">
+            We have some great features from the application and it’s totally
+            free to use by all users around the world.
+          </p>
+          <div class="flex gap-2-5">
+            <img src="images/icon/green-check.png" alt="" />
+            <p class="text-title cl-green">Small Fee</p>
+          </div>
+          <div class="flex gap-2-5">
+            <img src="images/icon/green-check.png" alt="" />
+            <p class="text-title cl-green">Data Secured</p>
+          </div>
+          <div class="flex gap-2-5">
+            <img src="images/icon/green-check.png" alt="" />
+            <p class="text-title cl-green">User Friendly</p>
+          </div>
+          <button class="btn-get-two bg-blue cl-white">Get Started</button>
+        </div>
+      </section>
+      <section class="section container-partnership">
+        <div class="flex flex-col gap-6 cl-gray flex-2">
+          <p class="heading2">100+ Trusted Partners</p>
+          <p class=".text-base-leading-1">
+            We have reached global level and have 100+ brand partners around the
+            globe.
+          </p>
+        </div>
+        <div class="flex flex-3 flex-justify-center-item-center">
+          <div>
+            <img
+              src="images/miscrosoft.png"
+              alt=""
+              width="97.11"
+              height="76.75"
+            />
+          </div>
+          <div>
+            <img src="images/dropbox.png" alt="" width="97.11" height="76.75" />
+          </div>
+          <div>
+            <img src="images/hm.png" alt="" width="97.11" height="76.75" />
+          </div>
+          <div>
+            <img src="images/airbnb.png" alt="" width="97.11" height="76.75" />
+          </div>
+          <div>
+            <img src="images/canon.png" alt="" width="97.11" height="76.75" />
+          </div>
+          <div>
+            <img src="images/dell.png" alt="" width="97.11" height="76.75" />
+          </div>
+        </div>
+      </section>
+      <section class="section flex flex-col gap-6">
+        <div>
+          <p class="heading2 align-center">What Our Users Are Saying</p>
+          <p class="text-base-normal-leading-1 align-center cl-gray">
+            Ready to experience the future of payments? Download e-wallet now
+            and enjoy a world of convenience at your fingertips.
+          </p>
+        </div>
+        <div class="flex-justify-between-item-center">
+          <img src="images/prev-btn.png" alt="" />
+          <div
+            class="bg-blue cl-white flex-justify-center-item-center flex-col gap-2-5 card"
+          >
+            <div class="flex flex-col flex-justify-between-item-center gap-2-5">
+              <img src="images/user/profile-eclips.png" alt="" />
+              <p>James Bond</p>
+              <div class="flex gap-2-5">
+                <img
+                  src="images/icon/yellow-star.png"
+                  alt=""
+                  width="13.23"
+                  height="12.64"
+                />
+                <img
+                  src="images/icon/yellow-star.png"
+                  alt=""
+                  width="13.23"
+                  height="12.64"
+                />
+                <img
+                  src="images/icon/yellow-star.png"
+                  alt=""
+                  width="13.23"
+                  height="12.64"
+                />
+                <img
+                  src="images/icon/yellow-star.png"
+                  alt=""
+                  width="13.23"
+                  height="12.64"
+                />
+                <img
+                  src="images/icon/yellow-star.png"
+                  alt=""
+                  width="13.23"
+                  height="12.64"
+                />
+                <p class=".text-desc">5.0</p>
+              </div>
+              <p class="text-5xl">“</p>
+            </div>
+            <p
+              class="text-base-normal-leading-1 flex flex-justify-center-item-center text-center"
+            >
+              I've been using the e-wallet for over two years now, and I'm very
+              satisfied with the ease of use. This has completely changed the
+              way I shop and conduct financial transactions.
+            </p>
+            <img
+              src="images/icon/scroll.png"
+              alt="scroll"
+              class="flex-justify-center-item-center"
+            />
+          </div>
+          <img src="images/next-btn (1).png" alt="" />
+        </div>
+      </section>
+      <section
+        class="section container-download-app bg-gray flex flex-justify-between-item-center"
+      >
+        <div class="flex flex-col gap-6 flex-2 container-store">
+          <p class="heading2">Download The App</p>
+          <p>
+            Ready to experience the future of payments? Download e-wallet now
+            and enjoy a world of convenience at your fingertips.
+          </p>
+          <div class="flex gap-6">
+            <button
+              class="btn-store flex-justify-center-item-center bg-blue cl-white .gap-2-5 border-blue text-btn-store"
+            >
+              <img src="images/gplay.png" alt="" />
+              <p>Play Store</p>
+            </button>
+            <button
+              class="btn-store flex-justify-center-item-center bg-gray cl-blue .gap-2-5 border-blue text-btn-store"
+            >
+              <img src="images/icon/apple-blue.png" alt="" />
+              <p>Apps Store</p>
+            </button>
+          </div>
+        </div>
+        <div class="flex container-image-mobile-download flex flex-1">
+          <img
+            src="images/Mobile - Dashboard V2.png"
+            alt=""
+            width="291"
+            height="443"
+            class="img-mobile-download one"
+          />
+          <img
+            src="images/Mobile - Dashboard V1.png"
+            alt=""
+            width="197"
+            height="336"
+            class="img-mobile-download two"
+          />
+        </div>
+      </section>
+
+      <footer class="bg-blue">
+        <div class="footer-container">
+          <div class="footer-child">
+            <div class="flex item-center gap-2-5">
+              <img src="images/MoneyWallet.png" alt="" />
+              <p class="text-icon-footer cl-white">E-Wallet</p>
+            </div>
+            <p class="text-desc cl-white">
+              Clarity gives you the blocks and components you need to create a
+              truly professional website.
+            </p>
+          </div>
+          <div class="footer-child">
+            <p class="text-lg-semibold-leading-4 cl-white">GET IN TOUCH</p>
+            <div>
+              <div class="flex item-center gap-2-5">
+                <img src="images/icon/u_phone.png" alt="" />
+                <p class="info text-base-semibold-leading-7">
+                  +62 5637 8882 9901
+                </p>
+              </div>
+              <div class="flex item-center gap-2-5">
+                <img src="images/icon/mail.png" alt="" />
+                <p class="info text-base-semibold-leading-7">
+                  contact@zwallet.com
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="footer-child">
+            <div class="text-lg-semibold-leading-4 cl-white">
+              <p>SOCIAL MEDIA</p>
+            </div>
+            <div>
+              <img src="images/twitter.png" alt="" />
+              <img src="images/facebook.png" alt="" />
+              <img src="images/instagram.png" alt="" />
+              <img src="images/github.png" alt="" />
+            </div>
+          </div>
+          <div class="footer-child">
+            <div>
+              <p class="text-lg-semibold-leading-4 cl-white">NEWSLETTER</p>
+            </div>
+            <div class="input">
+              <img src="images/icon/email.png" alt="" />
+              <input
+                type="text"
+                placeholder="Enter Your Email"
+                class="text-input"
+              />
+            </div>
+            <button class="btn-subscribe text-base">Subscribe</button>
+          </div>
+        </div>
+      </footer>
+    </main>
   </body>
 </html>

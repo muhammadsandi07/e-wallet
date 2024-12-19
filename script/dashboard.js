@@ -6,7 +6,6 @@ if (width >= 768) {
   cashFlow.classList.add('active')
   console.log('oi')
 }
-
 const toogle = document.querySelector('.toggle')
 const dropDown = document.querySelector('.container-dropdown')
 toogle.addEventListener('click', () => {
