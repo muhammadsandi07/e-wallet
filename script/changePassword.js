@@ -45,28 +45,50 @@ document.querySelector('.btn-submit').addEventListener('click', () => {
   const errMsgExt = document.querySelector('.ext-err')
   const errMsgNew = document.querySelector('.new-err')
   const errMsgConf = document.querySelector('.conf-err')
+  const formValidate = new Event('formValidate')
 
-  if (oldPassword.length <= 7) {
-    errMsgExt.textContent = 'panjang password minimal 8 angka'
-    return
-  } else {
-    if (oldPassword !== oldData.password) {
-      errMsgExt.textContent = 'password yang anda masukkan salah'
-      return
-    }
+  errMsgExt.addEventListener('formValidate', function () {
+    this.style.visibility = 'visible'
+  })
+  errMsgNew.addEventListener('formValidate', function () {
+    this.style.visibility = 'visible'
+  })
+  errMsgConf.addEventListener('formValidate', function () {
+    this.style.visibility = 'visible'
+  })
+
+  if (errMsgExt.checkVisibility({ visibilityProperty: true })) {
+    errMsgExt.style.visibility = 'hidden'
   }
-  if (newPassword.length <= 7) {
-    errMsgNew.textContent = 'panjang password minimal 8 angka'
-    return
+  if (errMsgNew.checkVisibility({ visibilityProperty: true })) {
+    errMsgNew.style.visibility = 'hidden'
   }
-  if (confPassword.length <= 7) {
-    errMsgExt.textContent = 'panjang password minimal 8 angka'
+  if (errMsgConf.checkVisibility({ visibilityProperty: true })) {
+    errMsgConf.style.visibility = 'hidden'
+  }
+
+  if (oldPassword == '' || oldPassword == undefined) {
+    errMsgExt.dispatchEvent(formValidate)
+    errMsgExt.textContent = 'password required'
+  } else if (oldPassword.length < 7) {
+    errMsgExt.dispatchEvent(formValidate)
+    errMsgExt.textContent = 'password length minimun 8 character'
+  }
+  if (newPassword == '' || newPassword == undefined) {
+    errMsgNew.dispatchEvent(formValidate)
+    errMsgNew.textContent = 'password required'
+  } else if (newPassword.length < 7) {
+    errMsgNew.dispatchEvent(formValidate)
+    errMsgNew.textContent = 'password length minimun 8 character'
+  }
+  if (confPassword == '' || confPassword == undefined) {
+    errMsgConf.dispatchEvent(formValidate)
+    errMsgConf.textContent = 'password required'
     return
-  } else {
-    if (confPassword !== newPassword) {
-      errMsgConf.textContent = 'password tidak sama'
-      return
-    }
+  } else if (confPassword.length < 7) {
+    errMsgConf.dispatchEvent(formValidate)
+    errMsgConf.textContent = 'password length minimun 8 character'
+    return
   }
 
   const newData = { ...oldData, password: newPassword }

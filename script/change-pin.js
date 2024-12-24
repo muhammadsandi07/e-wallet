@@ -4,7 +4,7 @@ const getPin = () => {
 document.querySelector('.btn-next').addEventListener('click', () => {
   console.log('click')
   const inputs = document.querySelectorAll('input')
-  const errorMessage = document.querySelector('.error')
+  const errorMessage = document.querySelector('.error-pin')
   let result = ''
   console.log(inputs, 'ini inputs')
   inputs.forEach((input) => {

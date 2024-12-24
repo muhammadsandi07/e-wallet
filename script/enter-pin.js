@@ -3,9 +3,11 @@ const savePin = (pin) => {
   return { pin: pin }
 }
 document.querySelector('button').addEventListener('click', () => {
+  console.log('oi oi')
   const inputs = document.querySelectorAll('input')
-  const errorMessage = document.querySelector('.error')
+  const errorMessage = document.querySelector('.error-pin')
   let result = ''
+  console.log(inputs)
 
   inputs.forEach((input) => {
     if (input.value.length === 0) {
@@ -17,5 +19,6 @@ document.querySelector('button').addEventListener('click', () => {
   })
   if (result.length === 6) {
     savePin(result)
+    location.href = '/login.html'
   }
 })

@@ -38,9 +38,14 @@ document.querySelector('.btn-submit').addEventListener('click', () => {
     errorFullname.dispatchEvent(formValidate)
     errorFullname.textContent = 'full name required'
   }
+  if (!regexFullName.test(fullName)) {
+    errorFullname.dispatchEvent(formValidate)
+    errorFullname.textContent = 'only letters can be inputted'
+  }
+
   if (phone == '' || phone == undefined || phone.length == 0) {
     errorphone.dispatchEvent(formValidate)
-    errorphone.textContent = 'full name required'
+    errorphone.textContent = 'number phone required'
   } else if (phone.length < 6 || phone.length > 13) {
     errorphone.dispatchEvent(formValidate)
     errorphone.textContent = 'number phone not valid'

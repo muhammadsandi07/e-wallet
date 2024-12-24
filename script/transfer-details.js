@@ -36,12 +36,21 @@ const inputNote = document.querySelector('textarea')
 const errorMessage = document.querySelector('.error')
 const amountError = document.querySelector('.amount-error')
 const btnNext = document.querySelector('.btn-next')
-
+const formValidate = new Event('formValidate')
+amountError.addEventListener('formValidate', function () {
+  this.style.visibility = 'visible'
+})
+console.log(inputAmount.value, 'ini amount')
 document.querySelector('.btn-submit').addEventListener('click', () => {
+  if (amountError.checkVisibility({ visibilityProperty: true })) {
+    amountError.style.visibility = 'hidden'
+  }
   if (inputAmount.value.length < 1) {
+    amountError.dispatchEvent(formValidate)
     amountError.textContent = 'silahkan isi jumlah nilai transfer'
   } else {
     if (Number(inputAmount.value) < 10000) {
+      amountError.dispatchEvent(formValidate)
       amountError.textContent = 'jumlah nilai transfer kurang dari Rp.10.000'
       return
     } else {
@@ -52,9 +61,8 @@ document.querySelector('.btn-submit').addEventListener('click', () => {
 })
 
 btnNext.addEventListener('click', async () => {
-  console.log('hiiii')
   const inputs = document.querySelectorAll('input#input-pin')
-  const errorMessage = document.querySelector('.error')
+  const errorMessage = document.querySelector('.error-pin')
   let result = ''
   try {
     inputs.forEach((input) => {
@@ -64,24 +72,34 @@ btnNext.addEventListener('click', async () => {
         result += input.value
       }
     })
-    console.log(result)
     if (result.length === 6) {
       if (result === getPin()) {
-        const success = true
+        const success = false
         const transferSuccess = await transfer(success)
         console.log(transferSuccess)
         if (transferSuccess) {
           popUpPin.classList.add('hide')
           popUpSuccess.classList.remove('hide')
+        } else {
         }
       } else {
         throw Error('pin yan anda masukkan salah')
       }
     }
   } catch (error) {
-    console.log(error)
-    popUpPin.classList.add('hide')
-    popUpFailed.classList.remove('hide')
+    if (error.message === 'false') {
+      popUpPin.classList.add('hide')
+      popUpFailed.classList.remove('hide')
+      return
+    }
+
     errorMessage.textContent = error.message
   }
+})
+
+document.querySelector('.btn-try-again').addEventListener('click', () => {
+  location.href = '/transfer-details.html'
+})
+document.querySelector('.btn-back').addEventListener('click', () => {
+  location.href = '/dashboard.html'
 })

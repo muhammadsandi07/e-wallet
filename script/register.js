@@ -94,7 +94,7 @@ const handleRegister = async () => {
     pwErr.dispatchEvent(formValidate)
 
     pwErr.textContent = 'password required'
-  } else if (password.length <= 8) {
+  } else if (password.length < 8) {
     pwErr.dispatchEvent(formValidate)
 
     pwErr.textContent = 'Password too short. Minimum 8 characters required'
@@ -104,7 +104,7 @@ const handleRegister = async () => {
     pwConfirm.dispatchEvent(formValidate)
     pwConfirm.textContent = 'confirm password required'
     return
-  } else if (confirmPassword.length <= 8) {
+  } else if (confirmPassword.length < 8) {
     pwConfirm.dispatchEvent(formValidate)
     pwConfirm.textContent = ' password too short. Minimum 8 characters required'
     return
@@ -113,10 +113,11 @@ const handleRegister = async () => {
     pwConfirm.textContent = 'Passwords do not match. Please try again.'
     return
   }
-
+  const form = new FormData()
   inputs.forEach((input) => {
     if (input.type === 'email') {
       Object.assign(formInput, { [input.name]: input.value })
+      form.append(input.name, input.value)
     }
     if (input.type === 'password' && input.name === 'password') {
       Object.assign(formInput, { [input.name]: input.value })
@@ -126,7 +127,7 @@ const handleRegister = async () => {
   console.log(formInput)
   console.log('to login')
   // localStorage.setItem('REGIST', )
-  // alertBox('success', 'pendaftaran berhasil')
+  alertBox('success', 'pendaftaran berhasil')
   // try {
   // document.querySelector('.loader').classList.add('active')
   // const resp = await getData(email)
