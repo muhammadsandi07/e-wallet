@@ -33,11 +33,12 @@ body {
   height: 466px;
   background-color: #fff;
   border-radius: 20px;
-  padding: 3.5rem;
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 1.8rem;
+  margin-inline: 10px;
 }
 
 .forgot-password p:nth-child(2) {
@@ -107,4 +108,10 @@ body {
   line-height: 24px;
   letter-spacing: -0.6px;
   border-radius: 6px;
+}
+
+@media screen and (min-width: 768px) {
+  .forgot-password {
+    padding: 3.5rem;
+  }
 }

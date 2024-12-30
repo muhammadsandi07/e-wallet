@@ -6,12 +6,13 @@
 
     <link rel="stylesheet" href="styles/global.css" />
     <link rel="stylesheet" href="styles/enter-pin.css" />
+    <!-- <link rel="stylesheet" href="styles/pin.css" /> -->
     <title>Enter Pin</title>
     <script type="module" src="script/enter-pin.js" defer></script>
   </head>
   <body>
-    <div class="container-register">
-      <div class="content-register">
+    <div class="section-pin">
+      <div class="content-pin">
         <div>
           <div class="logo">
             <img src="images/MoneyWallet.png" alt="" class="logo-image" />
@@ -20,27 +21,59 @@
           <p>Enter Your Pin 👋</p>
           <p>Please save your pin because this so important.</p>
         </div>
-        <div>
-          <div class="container-pin">
+
+        <div class="container-pin">
+          <div>
             <label for="input-pin" hidden></label>
-            <input type="text" name="input-pin" id="input-pin" maxlength="1" />
-            <input type="text" name="input-pin" id="input-pin" maxlength="1" />
-            <input type="text" name="input-pin" id="input-pin" maxlength="1" />
-            <input type="text" name="input-pin" id="input-pin" maxlength="1" />
-            <input type="text" name="input-pin" id="input-pin" maxlength="1" />
-            <input type="text" name="input-pin" id="input-pin" maxlength="1" />
+            <input
+              type="password"
+              name="input-pin"
+              id="input-pin"
+              maxlength="1"
+            />
+            <input
+              type="password"
+              name="input-pin"
+              id="input-pin"
+              maxlength="1"
+            />
+            <input
+              type="password"
+              name="input-pin"
+              id="input-pin"
+              maxlength="1"
+            />
+            <input
+              type="password"
+              name="input-pin"
+              id="input-pin"
+              maxlength="1"
+            />
+            <input
+              type="password"
+              name="input-pin"
+              id="input-pin"
+              maxlength="1"
+            />
+            <input
+              type="password"
+              name="input-pin"
+              id="input-pin"
+              maxlength="1"
+            />
           </div>
-          <p class="error"></p>
+          <span class="error-pin"></span>
         </div>
+
         <div>
           <button class="btn-submit">Submit</button>
           <p class="have-account">
-            Forgot Your Pin? <span><a href="">Reset</a></span>
+            Forgot Your Pin? <span><a href="change-pin.html">Reset</a></span>
           </p>
         </div>
       </div>
-      <div class="container-img-register">
-        <img src="images/image-enter-pin.png" alt="" class="img-register" />
+      <div class="container-img-pin">
+        <img src="images/image-enter-pin.png" alt="" class="img-pin" />
       </div>
     </div>
   </body>

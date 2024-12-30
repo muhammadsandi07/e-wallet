@@ -1,6 +1,23 @@
 .content-title,
 .progress-bar,
-.result {
+.result,
+.toggle {
+  display: none;
+}
+.header {
+  background-color: #2948ff;
+}
+.header .nav-profile {
+  display: flex;
+  flex-direction: row-reverse;
+  color: #fff;
+}
+.header .logo {
+  display: none;
+}
+.header .nav-profile > div > p:nth-child(1),
+.header .nav-profile > div > p:nth-child(2),
+.header .nav-profile > img:nth-child(2) {
   display: none;
 }
 .find-people .container-search {
@@ -25,6 +42,7 @@
   border: 1px solid #e8e8e8;
   gap: 1rem;
   border-radius: 6px;
+  align-items: center;
 }
 .search .input {
   font-family: 'Montserrat', serif;
@@ -48,7 +66,34 @@
   justify-content: flex-start;
   align-items: flex-start;
 }
+.input {
+  border: none;
+}
 @media screen and (min-width: 768px) {
+  .header {
+    background-color: #fff;
+  }
+  .header .logo {
+    display: flex;
+  }
+  .header .nav-profile {
+    color: #4f5665;
+    flex-direction: row;
+  }
+  .header .nav-profile > div > p:nth-child(1),
+  .header .nav-profile > div > p:nth-child(2),
+  .header .nav-profile > img:nth-child(2) {
+    display: flex;
+  }
+  .header .nav-profile > div > p:nth-child(3) {
+    display: none;
+  }
+  .header .nav-profile > div > p:first-child {
+    display: none;
+  }
+  .toggle {
+    display: flex;
+  }
   body {
     display: grid;
     min-height: 100vh;
@@ -163,6 +208,7 @@
     border: 1px solid #e8e8e8;
     gap: 1rem;
     border-radius: 6px;
+    align-items: center;
   }
   .search .input {
     font-family: 'Montserrat', serif;

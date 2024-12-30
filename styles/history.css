@@ -25,9 +25,10 @@ body {
   justify-content: space-between;
   border-bottom: 1px solid #e8e8e8;
   position: relative;
+  background-color: #2948ff;
 }
 .header .logo {
-  display: flex;
+  display: none;
   align-items: center;
   gap: 14px;
 }
@@ -51,6 +52,12 @@ body {
   font-size: 16px;
   line-height: 24px;
   letter-spacing: -0.6%;
+}
+.nav-profile p:nth-child(2) {
+  display: none;
+}
+.toggle {
+  display: none;
 }
 .container-dropdown {
   width: 248px;
@@ -86,6 +93,16 @@ body {
 .profile img {
   background-color: #2948ff;
   color: #0b132a;
+}
+.nav-profile img:nth-child(3) {
+  display: none;
+}
+.nav-profile p:nth-child(1) {
+  font-size: 14px;
+  color: #fff;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.6%;
 }
 
 #content {
@@ -166,6 +183,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 .container-search .title {
   font-size: 16px;
@@ -187,6 +206,7 @@ body {
   border: 1px solid #e8e8e8;
   gap: 1rem;
   border-radius: 6px;
+  align-items: center;
 }
 .search .input {
   font-family: 'Montserrat', serif;
@@ -194,7 +214,9 @@ body {
   font-size: 14px;
   font-weight: 500;
   line-height: 20px;
-  width: 340px;
+  max-width: 340px;
+  width: 100%;
+  border: none;
 }
 .search img {
   width: 16px;
@@ -211,6 +233,7 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 16px 24px 16px 4px;
+  gap: 8px;
 }
 
 .image-person {
@@ -223,6 +246,7 @@ body {
   flex: 3;
   align-items: center;
   justify-content: space-between;
+  flex-direction: column;
 }
 
 .name-people {
@@ -265,12 +289,15 @@ body {
   justify-content: space-between;
   align-items: center;
   margin-block: 1.7rem;
+  flex-wrap: wrap;
 }
+
 .list-pagination {
   display: flex;
   align-items: center;
   gap: 20px;
   line-height: 18px;
+  flex-wrap: wrap;
 }
 .pagination-details,
 .list-pagination a,
@@ -311,4 +338,32 @@ body {
 }
 .text-red {
   color: #d00000;
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    background-color: #fff;
+  }
+  .header .logo {
+    display: flex;
+  }
+  .toggle {
+    display: flex;
+  }
+  .nav-profile p:nth-child(1) {
+    display: none;
+  }
+
+  .nav-profile p:nth-child(2) {
+    display: block;
+  }
+  .nav-profile img:nth-child(3) {
+    display: block;
+  }
+  .transaction-desc {
+    flex-direction: row;
+  }
+  .search input.input {
+    width: 340px;
+  }
 }

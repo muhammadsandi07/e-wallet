@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -18,14 +18,13 @@ body {
   background-color: #fff;
 }
 
-.container-register {
+.container-pin {
   width: 100%;
   min-height: 100vh;
-  background-color: #2948ff;
   display: flex;
 }
 
-.content-register {
+.content-pin {
   flex: 1;
   min-height: 100vh;
   border-top-right-radius: 40px;
@@ -38,11 +37,6 @@ body {
   gap: 10px;
 }
 
-.container-pin {
-  display: flex;
-  flex: 1;
-  gap: 2rem;
-}
 #input-pin {
   font-size: 30px;
   font-weight: 500;
@@ -56,31 +50,31 @@ body {
 #input-pin:active {
   border-bottom: 1px solid #2948ff;
 }
-.content-register > div:first-child > p:nth-child(2) {
+.content-pin > div:first-child > p:nth-child(2) {
   font-size: 30px;
   font-weight: 500;
   line-height: 36.57px;
 }
-.content-register > div:first-child > p:nth-child(3) {
+.content-pin > div:first-child > p:nth-child(3) {
   font-size: 16px;
   font-weight: 400;
   line-height: 26.62px;
   color: #4f5665;
 }
-.content-register > div:first-child {
+.content-pin > div:first-child {
   flex: 1;
 }
-.content-register > div:nth-child(2) {
+.content-pin > div:nth-child(2) {
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 30px;
 }
-.content-register > div:nth-child(2) > p {
+.content-pin > div:nth-child(2) > p {
   flex: 1;
 }
-.content-register > div:last-child {
+.content-pin > div:last-child {
   flex: 1;
 }
 .logo {
@@ -103,6 +97,10 @@ body {
   row-gap: 1rem;
 }
 
+.container-pin > div {
+  display: flex;
+  gap: 1rem;
+}
 .input-label {
   font-size: 16px;
   font-weight: 500;
@@ -158,6 +156,7 @@ body {
   line-height: 20px;
   border-radius: 6px;
   margin-top: 12px;
+  cursor: pointer;
 }
 
 .have-account {
@@ -170,11 +169,203 @@ body {
   font-size: 16px;
   color: #2948ff;
 }
-.container-img-register {
+.container-img-pin {
   flex: 1;
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #2948ff;
+}
+.section-pin {
+  display: flex;
+}
+
+@media screen and (max-width: 768px) {
+  .section-pin {
+    background-color: #2948ff;
+    height: 100vh;
+    padding: 1rem;
+  }
+  .content-pin {
+    width: 335px;
+    max-height: 480px;
+    display: flex;
+  }
+  .container-img-pin {
+    display: none;
+  }
+  #input-pin {
+    width: 35px;
+  }
+  .container-pin > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+} */
+.container-img-pin {
+  display: none;
+}
+.section-pin {
+  background-color: #3969fd;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content-pin {
+  background-color: #fff;
+  width: 335px;
+  height: 480px;
+  border-radius: 20px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.logo img {
+  width: 32px;
+  height: 32px;
+}
+.logo p {
+  font-family: 'Nunito Sans', serif;
+  color: #2948ff;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 27.28px;
+}
+.content-pin > div > p:nth-child(2) {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21.94px;
+  color: #0b132a;
+  margin-top: 1rem;
+}
+.content-pin > div > p:nth-child(3) {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 19.97px;
+  color: #4f5665;
+  margin-top: 1rem;
+}
+.btn-submit {
+  background-color: #2948ff;
+  width: 100%;
+  border-radius: 6px;
+  padding: 10px;
+  font-size: 16px;
+  color: #fff;
+  line-height: 20px;
+  font-weight: 500;
+}
+.container-pin {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.error-pin {
+  font-size: 12px;
+  font-weight: 500;
+  color: rgb(255, 51, 51);
+  visibility: visible;
+}
+.container-pin > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+#input-pin {
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 36.57px;
+  width: 35px;
+  height: 50px;
+  text-align: center;
+  border-bottom: 1px solid #e8e8e8;
+}
+#input-pin:hover,
+#input-pin:active {
+  border-bottom: 1px solid #2948ff;
+}
+.have-account {
+  text-align: center;
+}
+.content-pin > div p.have-account {
+  font-size: 16px;
+  line-height: 19.5px;
+  font-weight: 400;
+  color: #aaaaaa;
+}
+.content-pin > div p.have-account span a {
+  font-size: 16px;
+  line-height: 19.5px;
+  font-weight: 400;
+  color: #3969fd;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 992px) {
+  .container-img-pin {
+    display: flex;
+    flex: 1;
+  }
+  .container-img-pin img {
+    height: 100vh;
+  }
+  .content-pin {
+    background-color: #fff;
+    flex: 1;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    padding: 2.5rem;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .content-pin > div > p:nth-child(2) {
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 36.57px;
+    color: #0b132a;
+    margin-top: 1rem;
+  }
+  .content-pin > div > p:nth-child(3) {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26.62px;
+    color: #4f5665;
+    margin-top: 1rem;
+  }
+  .content-pin > div p.have-account {
+    font-size: 16px;
+    line-height: 19.5px;
+    font-weight: 400;
+    color: #aaaaaa;
+  }
+  .content-pin > div p.have-account span a {
+    font-size: 16px;
+    line-height: 19.5px;
+    font-weight: 400;
+    color: #3969fd;
+    cursor: pointer;
+  }
+  .container-pin > div {
+    justify-content: space-evenly;
+  }
+  #input-pin {
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 36.57px;
+    width: 66px;
+    height: 50px;
+    text-align: center;
+    border-bottom: 1px solid #e8e8e8;
+  }
 }

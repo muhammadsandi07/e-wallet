@@ -16,15 +16,61 @@
         <p class="company-name">E-Wallet</p>
       </div>
       <nav class="nav-profile">
+        <p>History Transaction</p>
         <p class="username">Ghaluh Wizard</p>
         <img src="images/user/user-profile.png" alt="img-profile" />
-        <img src="images/icon/Vector.png" alt="img-dropdown" />
+        <img src="images/icon/Vector.svg" alt="img-dropdown" class="toggle" />
       </nav>
+      <button class="toggle-mobile" type="button">
+        <img src="images/icon/menu-right.svg" alt="" />
+      </button>
     </header>
     <!--container main -->
     <div class="flex">
       <!-- aside -->
       <aside class="container-aside">
+        <div class="aside-navigation rounded-6" target="/dashboard.html">
+          <img
+            class="aside-icon"
+            src="images/icon/dashboard-inactive.png"
+            alt=""
+          />
+          <p class="text-base font-normal">Dashboard</p>
+        </div>
+        <div class="aside-navigation" target="/transfer.html">
+          <img class="aside-icon" src="images/icon/Send.svg" alt="aside-icon" />
+          <p class="text-base font-normal">Transfer</p>
+        </div>
+        <div class="aside-navigation" target="/history.html">
+          <img
+            class="aside-icon"
+            src="images/icon/history.png"
+            alt="aside-icon"
+          />
+          <p class="text-base font-normal">History</p>
+        </div>
+        <div class="aside-navigation" target="/top-up-account.html">
+          <img
+            class="aside-icon"
+            src="images/icon/Upload.png"
+            alt="aside-icon"
+          />
+          <p class="text-base font-normal">Top Up</p>
+        </div>
+        <div class="aside-navigation" target="/edit-profile.html">
+          <img class="aside-icon" src="images/icon/user.png" alt="aside-icon" />
+          <p class="text-base font-normal">Profile</p>
+        </div>
+        <div class="aside-navigation" target="/index.html">
+          <img
+            class="aside-icon"
+            src="images/icon/Log Out.png"
+            alt="aside-icon"
+          />
+          <p class="text-base font-normal">Keluar</p>
+        </div>
+      </aside>
+      <aside class="container-aside-mobile hide">
         <div class="aside-navigation rounded-6" target="/dashboard.html">
           <img
             class="aside-icon"

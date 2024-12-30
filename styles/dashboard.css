@@ -22,9 +22,9 @@ header.header .logo,
 .nav-profile > div > p:last-child {
   font-weight: 500;
 }
-.nav-profile > img:last-child {
+/* .nav-profile > img:last-child {
   display: none;
-}
+} */
 
 .section-cash-flow {
   height: 84px;

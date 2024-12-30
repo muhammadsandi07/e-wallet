@@ -17,16 +17,20 @@
         <p class="company-name">E-Wallet</p>
       </div>
       <nav class="nav-profile">
+        <p>Transfer</p>
         <p class="username">Ghaluh Wizard</p>
         <img src="images/user/user-profile.png" alt="img-profile" />
         <img src="images/icon/Vector.svg" alt="img-dropdown" class="toggle" />
       </nav>
+      <button class="toggle-mobile" type="button">
+        <img src="images/icon/menu-right.svg" alt="" />
+      </button>
       <div class="container-dropdown">
-        <a href="" class="dropdown bg-blue">
-          <img src="images/icon/person.png" alt="icon-profile" />
+        <a href="/edit-profile.html" class="dropdown bg-blue">
+          <img src="images/icon/user-input.png" alt="icon-profile" />
           <p class="profile text-white">profile</p>
         </a>
-        <a href="" class="dropdown">
+        <a href="/index.html" class="dropdown">
           <img src="images/icon/Log Out.png" alt="icon-profile" />
           <p class="profile">keluar</p>
         </a>
@@ -73,9 +77,47 @@
         <p class="text-base font-normal">Keluar</p>
       </div>
     </aside>
+    <aside class="container-aside-mobile hide">
+      <div class="aside-navigation rounded-6" target="/dashboard.html">
+        <img
+          class="aside-icon"
+          src="images/icon/dashboard-inactive.png"
+          alt=""
+        />
+        <p class="text-base font-normal">Dashboard</p>
+      </div>
+      <div class="aside-navigation" target="/transfer.html">
+        <img class="aside-icon" src="images/icon/Send.svg" alt="aside-icon" />
+        <p class="text-base font-normal">Transfer</p>
+      </div>
+      <div class="aside-navigation" target="/history.html">
+        <img
+          class="aside-icon"
+          src="images/icon/history.png"
+          alt="aside-icon"
+        />
+        <p class="text-base font-normal">History</p>
+      </div>
+      <div class="aside-navigation" target="/top-up-account.html">
+        <img class="aside-icon" src="images/icon/Upload.png" alt="aside-icon" />
+        <p class="text-base font-normal">Top Up</p>
+      </div>
+      <div class="aside-navigation" target="/edit-profile.html">
+        <img class="aside-icon" src="images/icon/user.png" alt="aside-icon" />
+        <p class="text-base font-normal">Profile</p>
+      </div>
+      <div class="aside-navigation" target="/index.html">
+        <img
+          class="aside-icon"
+          src="images/icon/Log Out.png"
+          alt="aside-icon"
+        />
+        <p class="text-base font-normal">Keluar</p>
+      </div>
+    </aside>
     <main id="content">
       <div class="relative hide"></div>
-      <section class="pop-up">
+      <section class="pop-up hide">
         <header class="header-pop-up">
           <p>TRANSFER TO GHALUH 1</p>
         </header>
@@ -86,44 +128,46 @@
           </div>
           <div class="container-pin">
             <label for="input-pin" hidden></label>
-            <input
-              type="password"
-              name="input-pin"
-              id="input-pin"
-              maxlength="1"
-            />
-            <input
-              type="password"
-              name="input-pin"
-              id="input-pin"
-              maxlength="1"
-            />
-            <input
-              type="password"
-              name="input-pin"
-              id="input-pin"
-              maxlength="1"
-            />
-            <input
-              type="password"
-              name="input-pin"
-              id="input-pin"
-              maxlength="1"
-            />
-            <input
-              type="password"
-              name="input-pin"
-              id="input-pin"
-              maxlength="1"
-            />
-            <input
-              type="password"
-              name="input-pin"
-              id="input-pin"
-              maxlength="1"
-            />
+            <div>
+              <input
+                type="password"
+                name="input-pin"
+                id="input-pin"
+                maxlength="1"
+              />
+              <input
+                type="password"
+                name="input-pin"
+                id="input-pin"
+                maxlength="1"
+              />
+              <input
+                type="password"
+                name="input-pin"
+                id="input-pin"
+                maxlength="1"
+              />
+              <input
+                type="password"
+                name="input-pin"
+                id="input-pin"
+                maxlength="1"
+              />
+              <input
+                type="password"
+                name="input-pin"
+                id="input-pin"
+                maxlength="1"
+              />
+              <input
+                type="password"
+                name="input-pin"
+                id="input-pin"
+                maxlength="1"
+              />
+            </div>
+            <p class="error-pin"></p>
           </div>
-          <p class="error"></p>
           <div class="button-next">
             <button class="btn-next" type="button">Next</button>
             <p>
@@ -146,14 +190,11 @@
             <p>Thank you for using this application for your financial</p>
           </div>
           <div class="button-next">
-            <a href="dashboard.html">
-              <button class="btn-next" type="button">Next</button>
-            </a>
-            <a href="transfer.html">
-              <button class="btn-transfer-again" type="button">
-                Transfer Again
-              </button>
-            </a>
+            <button class="btn-next" type="button">Done</button>
+
+            <button class="btn-transfer-again" type="button">
+              Transfer Again
+            </button>
           </div>
         </section>
       </section>
@@ -170,10 +211,8 @@
             <p>Thank you for using this application for your financial</p>
           </div>
           <div class="button-next">
-            <button class="btn-next" type="button">Try Again</button>
-            <button class="btn-transfer-again" type="button">
-              Back To Dashboard
-            </button>
+            <button class="btn-try-again" type="button">Try Again</button>
+            <button class="btn-back" type="button">Back To Dashboard</button>
           </div>
         </section>
       </section>

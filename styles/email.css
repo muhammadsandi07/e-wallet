@@ -1,0 +1,75 @@
+.container-email {
+  background-color: #3969fd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.content-email {
+  background-color: #fff;
+  padding: 2rem 1rem;
+  margin-inline: 1rem;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.logo img {
+  width: 32px;
+  height: 32px;
+}
+.logo p {
+  font-family: 'Nunito Sans', serif;
+  color: #2948ff;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 27.28px;
+}
+.content-email > p:nth-child(2) {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21.94px;
+  color: #0b132a;
+}
+.content-email > p:nth-child(3) {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 19.97px;
+  color: #4f5665;
+}
+.btn-submit {
+  background-color: #2948ff;
+  width: 100%;
+  border-radius: 6px;
+  padding: 10px;
+  font-size: 16px;
+  color: #fff;
+  line-height: 20px;
+  font-weight: 500;
+}
+@media screen and (min-width: 768px) {
+  .content-email {
+    width: 550px;
+    height: 446px;
+    justify-content: space-evenly;
+    padding: 4rem 1rem;
+  }
+  .content-email > p:nth-child(2) {
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 36.57px;
+    color: #0b132a;
+  }
+  .content-email > p:nth-child(3) {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26.62px;
+    color: #4f5665;
+  }
+}

@@ -51,6 +51,19 @@ body {
   line-height: 24px;
   letter-spacing: -0.6%;
 }
+.header {
+  background-color: #2948ff;
+  color: #fff;
+}
+.header .logo {
+  display: none;
+}
+.header .nav-profile > p:nth-child(2),
+.header .nav-profile > p:nth-child(3),
+.header .nav-profile > img:nth-child(3),
+.header .nav-profile > img:nth-child(4) {
+  display: none;
+}
 .container-dropdown {
   width: 248px;
   height: 142px;
@@ -240,6 +253,22 @@ body {
 }
 
 @media screen and (min-width: 768px) {
+  .header {
+    background-color: #fff;
+  }
+  .header .logo {
+    display: flex;
+  }
+  .header .nav-profile > p:nth-child(2),
+  .header .nav-profile > p:nth-child(3),
+  .header .nav-profile > img:nth-child(3),
+  .header .nav-profile > img:nth-child(4) {
+    display: flex;
+  }
+  .header .nav-profile > p:nth-child(1) {
+    display: none;
+  }
+
   header.header {
     background-color: #fff;
     display: flex;
